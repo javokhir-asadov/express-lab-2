@@ -8,7 +8,9 @@ app.get('/greeting/:name', (req, res) => {
 });
 
 
-
+app.get('/tip/:total/:tipPercentage', (req, res) => {
+ res.send([Number(req.params.total) * (Number(req.params.tipPercentage) / 100)]);
+});
 
 
 
